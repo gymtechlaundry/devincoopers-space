@@ -1,12 +1,12 @@
 # Stage 1: Build Angular App
-FROM node:24.2.0 as builder
+FROM node:24.2.0 AS builder
 
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build --configuration production
+RUN npm run build:prod
 
 # Stage 2: Serve Angular App with NGINX
 FROM nginx:alpine

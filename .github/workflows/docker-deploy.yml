@@ -44,4 +44,4 @@ jobs:
                 username: ${{ secrets.K3S_USER }}
                 key: ${{ secrets.K3S_SSH_KEY }}
                 script: |
-                    kubectl rollout restart deployment devincoopers-space -n devincooper
+                    kubectl rollout restart deployment devincoopers-space-deployment -n devincooper

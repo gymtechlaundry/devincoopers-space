@@ -1,3 +1,20 @@
-<p>projects works!</p>
-<video src="assets/videos/SuperHero.mp4" autoplay>
-  Your browser does not support the video tag.
+<div class="projects-container">
+    <div class="app-grid">
+        <div class="app-icon" *ngFor="let app of projects" (click)="goToProject(app)">
+            <img [src]="app.icon" alt="{{ app.name }}">
+            <span>{{ app.name }}</span>
+        </div>
+    </div>
+
+    <div class="favorites-dock">
+        <button class="dock-icon" (click)="callMe()">
+            <img src="assets/images/icons/phone.png" alt="Call">
+        </button>
+        <button class="dock-icon" (click)="emailMe()">
+            <img src="assets/images/icons/email.png" alt="Email">
+        </button>
+        <button class="dock-icon" (click)="textMe()">
+            <img src="assets/images/icons/imessage.png" alt="Text">
+        </button>
+    </div>
+</div>

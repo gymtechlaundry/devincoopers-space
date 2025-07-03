@@ -1,59 +1,53 @@
-# DevincoopersSpace
+# devincoopers.space
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+Welcome to my portfolio site! This Angular application is the central hub for showcasing my work, projects, experience, and skills as a full-stack software engineer.
 
-## Development server
+## 🚀 About
 
-To start a local development server, run:
+**devincoopers.space** is built with Angular and designed to be mobile-first, lightweight, and modern. It seamlessly presents my software projects, background, and contact details in an intuitive interface.
+
+## 📦 Features
+
+- Fully responsive layout for desktop and mobile
+- Smooth navigation across hero, projects, experience, education, and about sections
+- Clean dark/light theme toggle
+- Modern Angular Material design
+- Deployed at [devincoopers.space](https://devincoopers.space)
+
+## 🛠️ Tech Stack
+
+- [Angular](https://angular.io/) 20+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Angular Material](https://material.angular.io/)
+- [SCSS](https://sass-lang.com/) for styling
+
+## 📚 Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/YOUR_GITHUB_USERNAME/devincoopers.space.git
+
+# Install dependencies
+npm install
+
+# Run locally
 ng serve
+
+# Build for production
+ng build --configuration production
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🤝 Contributing
 
-## Code scaffolding
+Currently, this is my personal portfolio project — but feel free to open issues or suggestions.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📄 License
 
-```bash
-ng generate component component-name
-```
+MIT License
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📬 Contact
 
-```bash
-ng generate --help
-```
+**Devin Cooper**\
+Email: [devin@devincoopers.space](mailto\:devin@devincoopers.space)\
+Website: [devincoopers.space](https://devincoopers.space)
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

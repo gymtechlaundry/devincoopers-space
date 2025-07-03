@@ -1,0 +1,18 @@
+<div class="modal-wrapper">
+    <button class="close-button" (click)="close()">x</button>
+
+    <div class="modal-content">
+        <img [src]="data.icon" alt="{{ data.name }}" class="modal-icon">
+        <h1>{{ data.name }}</h1>
+        <p>{{ data.description }}</p>
+
+        <div class="modal-actions">
+            <button mat-flat-button color="primary" *ngIf="data.downloadUrl" (click)="goTo(data.downloadUrl)">
+                Download
+            </button>
+            <button mat-flat-button color="accent" *ngIf="data.github" (click)="goTo(data.github)">
+                Github
+            </button>
+        </div>
+    </div>
+</div>

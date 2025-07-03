@@ -1,7 +1,69 @@
-body, html {
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-    background-color: black;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease infinite, transform 3s ease infinite;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page.hero {
+    position: relative;
+    height: 100dvh;
+    box-sizing: border-box;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    font-size: 1.5rem;
+    scroll-snap-align: start;
+}
+
+ .page.projects {
+    position: relative;
+    height: 100dvh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    font-size: 1.5rem;
+    scroll-snap-align: start;
+    color: black;
+}
+
+.icon-wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.scroll-indicator {
+    width: 40px !important;
+    height: 30px !important;
+    display: flex;
+    font-size: 2.5rem;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }

@@ -15,7 +15,7 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copy compiled Angular app to NGINX html folder
-COPY --from=builder /dist/devincoopers-space /usr/share/nginx/html
+COPY --from=builder /app/dist/devincoopers-space /usr/share/nginx/html
 
 # Remove default nginx config and replace with custom one if needed
 COPY nginx.conf /etc/nginx/nginx.conf

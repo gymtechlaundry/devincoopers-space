@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { TabNavigatorComponent } from './components/tab-navigator/tab-navigator.component';
 
 export const routes: Routes = [ 
     {

@@ -4,11 +4,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectDetailModalComponent } from '../project-detail-modal/project-detail-modal.component';
-import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, MatCardModule, MatGridListModule, MatIcon],
+  imports: [CommonModule, MatCardModule, MatGridListModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -17,35 +16,35 @@ export class ProjectsComponent {
     {
       name: 'Not Todo',
       icon: 'assets/images/icons/not-todo.png',
-      description: 'Reclaim your time and sanity by keeping track of things you should not be doing.',
-      downloadUrl: 'https://play.google.com/store/apps/details?id=com.darcsoftware.nottodo&pcampaignid=web_share',
+      description: 'Under Construction',
+      downloadUrl: 'https://play.google.com/store/apps/details?id=com.darcsoftware.petassistant&pcampaignid=web_share',
       github: 'https://github.com/gymtechlaundry/NotTodo'
     },
     {
       name: 'Pet Assistant',
       icon: 'assets/images/icons/pet-assistant.png',
-      description: 'Keep track of your pet\'s important details.',
+      description: 'Under Construction',
       downloadUrl: 'https://play.google.com/store/apps/details?id=com.darcsoftware.petassistant&pcampaignid=web_share',
       github: 'https://github.com/gymtechlaundry/pet-assistant'
     },
     {
       name: 'My Portfolio',
       icon: 'assets/images/icons/portfolio.png',
-      description: 'Keep track of your pet\'s important details.',
+      description: 'Under Construction',
       downloadUrl: 'https://play.google.com/store/apps/details?id=com.darcsoftware.petassistant&pcampaignid=web_share',
       github: 'https://github.com/gymtechlaundry/pet-assistant'
     },
     {
       name: 'DARC Software',
       icon: 'assets/images/icons/darcsoftware.png',
-      description: 'Keep track of your pet\'s important details.',
+      description: 'Under Construction',
       downloadUrl: 'https://play.google.com/store/apps/details?id=com.darcsoftware.petassistant&pcampaignid=web_share',
       github: 'https://github.com/gymtechlaundry/pet-assistant'
     },
     {
       name: 'My Github',
       icon: 'assets/images/icons/github.png',
-      description: 'Keep track of your pet\'s important details.',
+      description: 'Link',
       downloadUrl: '',
       github: '',
       url: 'https://github.com/gymtechlaundry'
@@ -53,7 +52,7 @@ export class ProjectsComponent {
     {
       name: 'My LinkedIn',
       icon: 'assets/images/icons/linkedin.png',
-      description: 'Keep track of your pet\'s important details.',
+      description: 'Link',
       downloadUrl: '',
       github: '',
       url: 'https://www.linkedin.com/in/devinraycooper/'
@@ -64,13 +63,17 @@ export class ProjectsComponent {
   }
 
   goToProject(app: any) {
-    this.dialog.open(ProjectDetailModalComponent, {
-      data: app,
-      width: '100dvw',
-      maxWidth: '100dvw',
-      height: '100dvh',
-      panelClass: 'full-screen-modal'
-    })
+    if (!app.downloadUrl) {
+      window.open(app.url, '_blank')
+    } else {
+      this.dialog.open(ProjectDetailModalComponent, {
+        data: app,
+        width: '100dvw',
+        maxWidth: '100dvw',
+        height: '100dvh',
+        panelClass: 'full-screen-modal'
+      })
+    }
   }
 
   callMe() {

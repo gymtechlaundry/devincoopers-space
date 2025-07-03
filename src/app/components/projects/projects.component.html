@@ -1,19 +1,19 @@
 <div class="projects-container">
     <div class="app-grid">
-        <div class="app-icon" *ngFor="let app of projects" (click)="goToProject(app)">
+        <div class="app-icon" *ngFor="let app of projects" (pointerup)="goToProject(app)">
             <img [src]="app.icon" alt="{{ app.name }}">
             <span>{{ app.name }}</span>
         </div>
     </div>
 
     <div class="favorites-dock">
-        <button class="dock-icon" (click)="callMe()">
+        <button class="dock-icon" (pointerup)="callMe()">
             <img src="assets/images/icons/phone.png" alt="Call">
         </button>
-        <button class="dock-icon" (click)="emailMe()">
+        <button class="dock-icon" (pointerup)="emailMe()">
             <img src="assets/images/icons/email.png" alt="Email">
         </button>
-        <button class="dock-icon" (click)="textMe()">
+        <button class="dock-icon" (pointerup)="textMe()">
             <img src="assets/images/icons/imessage.png" alt="Text">
         </button>
     </div>

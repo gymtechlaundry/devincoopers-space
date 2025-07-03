@@ -16,7 +16,7 @@ export class ProjectsComponent {
     {
       name: 'Not Todo',
       icon: 'assets/images/icons/not-todo.png',
-      description: 'Under Construction',
+      description: 'The Not To-Do App is a mobile-first productivity tool designed to help users break bad habits by focusing on what they should avoid doing. Instead of tracking tasks to complete, it encourages mindful behavior by letting users create and categorize habits they want to eliminate. The app sends smart daily reminders, tracks streaks, and provides visual feedback on progress. Built with Ionic, Angular, and SQLite, the Not To-Do App combines clean design with intentional functionality to help users stay focused, disciplined, and in control of their time and attention.',
       downloadUrl: 'https://play.google.com/store/apps/details?id=com.darcsoftware.petassistant&pcampaignid=web_share',
       github: 'https://github.com/gymtechlaundry/NotTodo'
     },

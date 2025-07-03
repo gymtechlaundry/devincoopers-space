@@ -17,7 +17,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy Angular build from the correct folder
-COPY --from=builder /app/dist/devincoopers-space /usr/share/nginx/html
+COPY --from=builder /app/dist/devincoopers-space/browser /usr/share/nginx/html
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

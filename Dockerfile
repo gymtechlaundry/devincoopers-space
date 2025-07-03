@@ -14,6 +14,8 @@ FROM nginx:alpine
 # Clean default nginx static files
 RUN rm -rf /usr/share/nginx/html/*
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Copy Angular build from the correct folder
 COPY --from=builder /app/dist/devincoopers-space /usr/share/nginx/html
 

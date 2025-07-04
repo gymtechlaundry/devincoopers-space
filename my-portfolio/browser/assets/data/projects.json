@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Not Todo",
+    "icon": "assets/images/icons/not-todo.png",
+    "description": "Not To-Do helps you break bad habits by tracking what not to do. Set reminders, log failed habits, and stay focused with daily nudges to improve your discipline.",
+    "androidLink": "https://play.google.com/store/apps/details?id=com.darcsoftware.nottodo&pcampaignid=web_share",
+    "iosLink": "",
+    "website": "",
+    "github": "https://github.com/gymtechlaundry/NotTodo",
+    "screenshots": [
+      "NotTodo/home-screen.jpg",
+      "NotTodo/add-screen.jpg",
+      "NotTodo/stats-screen.jpg",
+      "NotTodo/settings-screen.jpg"
+    ]
+  },
+  {
+    "name": "Pet Assistant",
+    "icon": "assets/images/icons/pet-assistant.png",
+    "description": "Pet Assistant is a smart pet care app under construction—designed to track health, reminders, and records. It’s not ready yet, but perfection takes time (and belly rubs).",
+    "androidLink": "",
+    "iosLink": "",
+    "website": "",
+    "github": "https://github.com/gymtechlaundry/pet-assistant",
+    "screenshots": [
+        "PetAssistant/construction-screen.jpg",
+        "PetAssistant/construction-screen.jpg",
+        "PetAssistant/construction-screen.jpg",
+        "PetAssistant/construction-screen.jpg",
+        "PetAssistant/construction-screen.jpg"
+        ]
+  },
+  {
+    "name": "My Portfolio",
+    "icon": "assets/images/icons/portfolio.png",
+    "description": "Welcome to my portfolio—built with Angular and deployed on my home server in a Docker container using Kubernetes for orchestration. Every detail runs under the watchful eye of Datadog for reliability and insight. This site isn’t just a showcase of my work—it is my work, demonstrating real-world deployment, observability, and frontend architecture in action.",
+    "androidLink": "",
+    "iosLink": "",
+    "website": "http://devincoopers.space",
+    "github": "https://github.com/gymtechlaundry/pet-assistant",
+    "screenshots": [
+        "Portfolio/home-screen.png",
+        "Portfolio/projects-screen.png",
+        "Portfolio/app-details.png",
+        "Portfolio/app-details2.png"
+    ]
+  },
+  {
+    "name": "DARC Software",
+    "icon": "assets/images/icons/darcsoftware.png",
+    "description": "DARC Software is launching soon—your future partner in cutting-edge software and mobile app development. We build sleek, scalable web and mobile solutions tailored to your business needs. Whether you’re a startup or scaling up, DARC Software delivers clean code, intuitive design, and real results. Stay tuned—the next evolution in custom development is on its way.",
+    "androidLink": "",
+    "iosLink": "",
+    "website": "http://devincoopers.space/darcsoftware",
+    "github": "https://github.com/gymtechlaundry/pet-assistant",
+    "screenshots": [
+        "DARC/UX.jpg"
+    ]
+  },
+  {
+    "name": "My Github",
+    "icon": "assets/images/icons/github.png",
+    "url": "https://github.com/gymtechlaundry"
+  },
+  {
+    "name": "My LinkedIn",
+    "icon": "assets/images/icons/linkedin.png",
+    "url": "https://www.linkedin.com/in/devinraycooper/"
+  }
+]

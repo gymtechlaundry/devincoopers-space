@@ -56,3 +56,10 @@ html, body {
         transform: translateX(-50%) translateY(10px);
     }
 }
+
+.mat-mdc-dialog-surface {
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

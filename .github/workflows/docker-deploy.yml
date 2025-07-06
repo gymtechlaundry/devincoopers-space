@@ -30,8 +30,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
             ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.sha }}
           no-cache: true
 
   deploy:
@@ -47,12 +47,15 @@ jobs:
           username: ${{ secrets.K3S_USER }}
           key: ${{ secrets.K3S_SSH_KEY }}
           script: |
-            # Ensure imagePullPolicy is Always (only needs to be run once)
+            # Patch imagePullPolicy to Always (run once)
             kubectl patch deployment devincoopers-space-deployment \
               -n devincooper \
               -p '{"spec":{"template":{"spec":{"containers":[{"name":"devincoopers-space","imagePullPolicy":"Always"}]}}}}'
 
-            # Update image to latest tag
+            # Deploy latest SHA-tagged image
             kubectl set image deployment/devincoopers-space-deployment \
-              devincoopers-space=ghcr.io/gymtechlaundry/devincoopers-space:latest \
+              devincoopers-space=ghcr.io/gymtechlaundry/devincoopers-space:${{ github.sha }} \
               -n devincooper
+
+            # Wait for rollout completion
+            kubectl rollout status deployment/devincoopers-space-deployment -n devincooper

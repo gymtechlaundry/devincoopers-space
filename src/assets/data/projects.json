@@ -33,7 +33,7 @@
   {
     "name": "My Portfolio",
     "icon": "assets/images/icons/portfolio.png",
-    "description": "Welcome to my portfolio—built with Angular and deployed on my home server in a Docker container using Kubernetes for orchestration. Every detail runs under the watchful eye of Datadog for reliability and insight. This site isn’t just a showcase of my work—it is my work, demonstrating real-world deployment, observability, and frontend architecture in action.",
+    "description": "This isn’t just a portfolio—it’s proof of concept. Built with Angular, Dockerized, Kubernetes-orchestrated, and Datadog-watched. Hosted on my own server. No templates. No fluff. Just real engineering.",
     "androidLink": "",
     "iosLink": "",
     "website": "http://devincoopers.space",
@@ -48,7 +48,7 @@
   {
     "name": "DARC Software",
     "icon": "assets/images/icons/darcsoftware.png",
-    "description": "DARC Software is launching soon—your future partner in cutting-edge software and mobile app development. We build sleek, scalable web and mobile solutions tailored to your business needs. Whether you’re a startup or scaling up, DARC Software delivers clean code, intuitive design, and real results. Stay tuned—the next evolution in custom development is on its way.",
+    "description": "DARC Software specializes in scalable, cloud-native web and mobile apps. We architect robust backends, pixel-perfect frontends, and seamless CI/CD pipelines to deliver high-performance solutions for startups and enterprise clients alike.",
     "androidLink": "",
     "iosLink": "",
     "website": "http://devincoopers.space/darcsoftware",

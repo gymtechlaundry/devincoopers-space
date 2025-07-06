@@ -16,8 +16,8 @@
     font-family: Arial, Helvetica, sans-serif;
     
     @media (min-width: 768px) {
-        width: 80vw;
-        height: 60vh;
+        width: 60vw;
+        height: 75vh;
         border-radius: 20px;
     }
 }
@@ -47,30 +47,87 @@
     .title {
         display: flex;
         flex-direction: column;
-        padding-left: 1.2rem;
+        padding-left: 0.5rem;
+        position: relative;
 
-        h1 {
-            font-size: 1.5rem;
+        
+        
+        @media (min-width: 300px) {
+            h1 {
+                font-size: 1rem;
+            }
 
-            span {
+            .subtitle {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (min-width: 400px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
                 font-size: 1rem;
             }
         }
 
-        span {
-            font-size: 1rem;
-        }
-
     }
+
     .links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: auto;
+    }
+
+    .close {
         display: flex;
         justify-content: flex-end;
-        flex: auto;
-        padding: 0 1rem;
+        padding-top: 20px;
+    }
+
+    .close-button {
+        background: red;
+        border: 1px solid black;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        mat-icon {
+            color: white;
+            font-size: 15px;
+            height: 18px;
+            width: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+    }   
+
+    .download {
+        display: flex;
+        justify-content: flex-end;
 
         img {
             height: 25px;
-            padding-right: 1rem;
+            padding-right: 0.5rem;
         }
 
         .download-link {
@@ -87,7 +144,8 @@
 }
 
 .description {
-    padding: 1rem 1.2rem 1rem;
+    padding: 1rem 1.2rem;
+    text-align: justify;
     p {
         color: rgba(0, 0, 0, 0.6);
         font-size: 1rem;
@@ -97,9 +155,26 @@
     }
 }
 
+mat-dialog-content {
+    padding:  1.2rem 0 !important;
+    overflow-y: hidden;
+}
 
 .card-wrapper {
     display: flex;
+    
+    @media (min-width: 300px) {
+        height: 350px;
+    }
+
+    @media (min-width: 400px) {
+        height: 450px
+    }
+
+    @media (min-width: 768px) {
+        height: 350px;
+    }
+
 }
 
 mat-card {
@@ -110,23 +185,19 @@ mat-card {
         padding: 0;
         img {
             border-radius: 20px;
-            height: 500px;
+          
+            @media (min-width: 300px) {
+                height: 350px;
+            }
+
+            @media (min-width: 400px) {
+                height: 450px
+            }
 
             @media (min-width: 768px) {
-                height: 300px;
+                height: 350px;
             }
+
         }
     }
 }
-
-.close-button {
-    background: none;
-    border: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    mat-icon {
-        color: rgb(40, 39, 39);
-    }
-}   

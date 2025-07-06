@@ -6,11 +6,16 @@
         </div>
         <div class="title">
             <h1>{{data.name}}</h1>
-            <span>DARC Software</span>
+            <span class="subtitle">DARC Software LLC</span>
         </div>
         <div class="links">
-            <img src="assets/images/icons/github.png" alt="Github" (pointerup)="goToUrl(data.github)">
-            <button class="download-link" (pointerup)="goToApp(data)">{{ buttonLabel }}</button>
+            <div class="close">
+                <button class="close-button" (click)="close()"><mat-icon>close</mat-icon></button>
+            </div>
+            <div class="download">
+                <img src="assets/images/icons/github.png" alt="Github" (pointerup)="goToUrl(data.github)">
+                <button class="download-link" (pointerup)="goToApp(data)">{{ buttonLabel }}</button>
+            </div>
         </div>
     </div>
     <div class="description">
@@ -27,5 +32,4 @@
             </mat-card>
         </div>
     </mat-dialog-content>
-    <button class="close-button" (click)="close()"><mat-icon>close</mat-icon></button>
 </div>

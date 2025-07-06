@@ -5,6 +5,6 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy built Angular app
-COPY dist/devincoopers-space/browser /usr/share/nginx/html
+COPY ./ /usr/share/nginx/html
 
 EXPOSE 80

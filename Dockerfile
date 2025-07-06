@@ -5,15 +5,14 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npx ng build devincoopers-space --configuration production
+RUN npm run build -- devincoopers-space --configuration production
 
 # Stage 2: Serve with NGINX
 FROM nginx:alpine
 
-# Remove default nginx site
 RUN rm -rf /usr/share/nginx/html/*
 
-# Replace with your actual Angular dist folder name below:
+# Use the actual output path
 COPY --from=builder /app/dist/devincoopers-space /usr/share/nginx/html
 
 EXPOSE 80

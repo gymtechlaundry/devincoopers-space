@@ -1,9 +1,9 @@
-<section class="page hero">
+<section #sectionRef class="page hero">
     <app-hero></app-hero>
     <span class="icon-wrapper">
-        <mat-icon class="scroll-indicator next">keyboard_arrow_down</mat-icon>
+        <mat-icon class="scroll-indicator next" (click)="scrollToSection(sectionRefs.get(1))">keyboard_arrow_down</mat-icon>
     </span>
 </section>
-<section class="page projects">
+<section #sectionRef class="page projects">
     <app-projects></app-projects>
 </section>

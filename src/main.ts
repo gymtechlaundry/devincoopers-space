@@ -13,27 +13,34 @@ function initializeGA(): Promise<void> {
     script.onload = () => {
       console.log('[GA] Script loaded successfully');
 
+      // Define gtag
       (window as any).dataLayer = (window as any).dataLayer || [];
       function gtag(...args: any[]) {
-        console.log('[GA] gtag fired:', args); // ✅ Log every gtag call
+        console.log('[GA] gtag fired:', args);
         (window as any).dataLayer.push(args);
       }
       (window as any).gtag = gtag;
 
+      const pagePath = window.location.pathname + window.location.search;
+
+      // Configure GA (must come before firing any events)
       gtag('js', new Date());
       gtag('config', 'G-FH8LQY4GFP', {
-        page_path: window.location.pathname + window.location.search
+        page_path: pagePath
       });
 
-      gtag('event', 'page_view', {
-        page_path: window.location.pathname + window.location.search
-      });
+      // Small delay to ensure config is fully registered before sending events
+      setTimeout(() => {
+        gtag('event', 'page_view', {
+          page_path: pagePath
+        });
 
-      if (window.location.search.includes('utm_')) {
-        gtag('event', 'session_start');
-      }
+        if (window.location.search.includes('utm_')) {
+          gtag('event', 'session_start');
+        }
 
-      resolve();
+        resolve();
+      }, 250); // Slight buffer to allow config to settle
     };
 
     script.onerror = () => {
@@ -45,10 +52,11 @@ function initializeGA(): Promise<void> {
   });
 }
 
+// Load GA first, then bootstrap Angular
 initializeGA()
   .then(() => {
     console.log('[GA] Bootstrapping Angular');
     bootstrapApplication(AppComponent, appConfig)
-      .catch((err) => console.error('[GA] Angular bootstrap failed', err));
+      .catch(err => console.error('[GA] Angular bootstrap failed', err));
   })
-  .catch((err) => console.error('[GA] GA init failed', err));
+  .catch(err => console.error('[GA] GA initialization failed', err));

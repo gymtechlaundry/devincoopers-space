@@ -40,22 +40,23 @@ jobs:
     environment: production
 
     steps:
-      - name: Deploy via SSH
+      - name: Checkout Helm Values Repo
+        uses: actions/checkout@v4
+        with:
+          repository: darc-software/helm-values
+          path: helm-values
+          ssh-key: ${{ secrets.HELM_REPO_DEPLOY_KEY }}
+
+      - name: Deploy via Helm over SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.K3S_HOST }}
           username: ${{ secrets.K3S_USER }}
           key: ${{ secrets.K3S_SSH_KEY }}
           script: |
-            # Patch imagePullPolicy to Always (run once)
-            kubectl patch deployment devincoopers-space-deployment \
-              -n devincooper \
-              -p '{"spec":{"template":{"spec":{"containers":[{"name":"devincoopers-space","imagePullPolicy":"Always"}]}}}}'
+            cd ~/k8s-apps/charts # adjust path as needed
 
-            # Deploy latest SHA-tagged image
-            kubectl set image deployment/devincoopers-space-deployment \
-              devincoopers-space=ghcr.io/gymtechlaundry/devincoopers-space:${{ github.sha }} \
-              -n devincooper
-
-            # Wait for rollout completion
-            kubectl rollout status deployment/devincoopers-space-deployment -n devincooper
+            helm upgrade --install devincoopers-space ./devincoopers-space \
+              --namespace devincooper \
+              --create-namespace \
+              --set image.tag=${{ github.sha }}

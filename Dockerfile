@@ -7,15 +7,11 @@ RUN npm install
 COPY . .
 RUN npx ng build devincoopers-space --configuration production
 
-# Stage 2: Serve with full NGINX (not Alpine)
-FROM nginx:latest
+# Stage 2: Serve with NGINX
+FROM nginx:alpine
 
-RUN rm -rf /usr/share/nginx/html/*
-
-# Custom NGINX config (with mime.types)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Copy Angular app output
+RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /app/dist/devincoopers-space/browser /usr/share/nginx/html
 
 EXPOSE 80

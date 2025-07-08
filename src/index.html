@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google Analytics (GA4) with UTM + SPA support -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FH8LQY4GFP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
+  gtag('js', new Date());
+
+  // Always include the full URL with UTM in page path
+  gtag('config', 'G-FH8LQY4GFP', {
+    page_path: window.location.pathname + window.location.search
+  });
+
+  // Explicit page_view
+  gtag('event', 'page_view', {
+    page_path: window.location.pathname + window.location.search
+  });
+
+  // Optional: force session_start if UTM present
+  if (window.location.search.includes('utm_')) {
+    gtag('event', 'session_start');
+  }
+</script>
   <meta charset="utf-8">
   <title>Devincoopers Space</title>
   <base href="/">

@@ -14,12 +14,15 @@ export class AppComponent {
 
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
-    if (event instanceof NavigationEnd) {
-      gtag('config', 'G-FH8LQY4GFP', {
-        debug_mode: true,
-        page_path: window.location.pathname + window.location.search
-      });
-    }
-  });
+      if (event instanceof NavigationEnd) {
+        gtag('config', 'G-FH8LQY4GFP', {
+          page_path: window.location.pathname + window.location.search
+        });
+
+        gtag('event', 'page_view', {
+          page_path: window.location.pathname + window.location.search
+        });
+      }
+    });
   }
 }

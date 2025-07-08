@@ -12,7 +12,10 @@ FROM nginx:alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-# Use the actual output path
+# Copy custom NGINX config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy built Angular app
 COPY --from=builder /app/dist/devincoopers-space/browser /usr/share/nginx/html
 
 EXPOSE 80

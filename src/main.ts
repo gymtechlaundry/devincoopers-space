@@ -22,7 +22,6 @@ function initializeGA(): Promise<void> {
 
       gtag('js', new Date());
       gtag('config', 'G-FH8LQY4GFP', {
-        debug_mode: true,
         page_path: window.location.pathname + window.location.search
       });
 

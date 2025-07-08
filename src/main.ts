@@ -20,6 +20,11 @@ function initializeGA(): Promise<void> {
         page_path: window.location.pathname + window.location.search
       });
 
+      // ✅ Explicitly fire page_view
+      gtag('event', 'page_view', {
+        page_path: window.location.pathname + window.location.search
+      });
+
       if (window.location.search.includes('utm_')) {
         gtag('event', 'session_start');
       }

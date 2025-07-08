@@ -56,10 +56,11 @@ jobs:
           script: |
             set -e
             set -x
-            
-            cd ~/k8s-apps/charts # adjust path as needed
 
-            helm upgrade --install devincoopers-space ./devincoopers-space \
+            cd ~/helm-values/charts/devincoopers-space
+            ls  # Add this for debugging
+
+            helm upgrade --install devincoopers-space . \
               --namespace devincooper \
               --create-namespace \
               --set image.tag=${{ github.sha }}

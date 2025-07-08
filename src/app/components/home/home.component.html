@@ -1,7 +1,7 @@
 <section #sectionRef class="page hero">
     <app-hero></app-hero>
     <span class="icon-wrapper">
-        <mat-icon class="scroll-indicator next" (click)="scrollToSection(sectionRefs.get(1))">keyboard_arrow_down</mat-icon>
+        <mat-icon class="scroll-indicator next" trackClick trackLabel="Scroll to projects" trackCategory="scroll" (click)="scrollToSection(sectionRefs.get(1))">keyboard_arrow_down</mat-icon>
     </span>
 </section>
 <section #sectionRef class="page projects">

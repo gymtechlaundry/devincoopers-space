@@ -1,13 +1,13 @@
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
-import { MatToolbar } from '@angular/material/toolbar';
 import { MatIcon } from '@angular/material/icon';
 import { HeroComponent
  } from '../hero/hero.component';
 import { ProjectsComponent } from "../projects/projects.component";
+import { TrackClickDirective } from '../../directive/track-click.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [MatIcon, HeroComponent, ProjectsComponent],
+  imports: [MatIcon, HeroComponent, ProjectsComponent, TrackClickDirective],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

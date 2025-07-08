@@ -37,7 +37,7 @@
     "androidLink": "",
     "iosLink": "",
     "website": "http://devincoopers.space",
-    "github": "https://github.com/gymtechlaundry/pet-assistant",
+    "github": "https://github.com/gymtechlaundry/devincoopers-space",
     "screenshots": [
         "Portfolio/home-screen.png",
         "Portfolio/projects-screen.png",
@@ -52,18 +52,18 @@
     "androidLink": "",
     "iosLink": "",
     "website": "http://devincoopers.space/darcsoftware",
-    "github": "https://github.com/gymtechlaundry/pet-assistant",
+    "github": "https://github.com/DARC-Software",
     "screenshots": [
         "DARC/UX.jpg"
     ]
   },
   {
-    "name": "My Github",
+    "name": "Github",
     "icon": "assets/images/icons/github.png",
     "url": "https://github.com/gymtechlaundry"
   },
   {
-    "name": "My LinkedIn",
+    "name": "LinkedIn",
     "icon": "assets/images/icons/linkedin.png",
     "url": "https://www.linkedin.com/in/devinraycooper/"
   }

@@ -5,10 +5,13 @@ import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectDetailModalComponent } from '../project-detail-modal/project-detail-modal.component';
 import projects from '../../../assets/data/projects.json';
+import { TrackClickDirective } from '../../directive/track-click.directive';
+
+declare let gtag: Function;
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, MatCardModule, MatGridListModule],
+  imports: [CommonModule, MatCardModule, MatGridListModule, TrackClickDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -24,15 +27,23 @@ export class ProjectsComponent {
 
   goToProject(app: any) {
     if (app.url) {
+      gtag('event', 'click', {
+        event_category: 'outbound',
+        event_label: app.name.toLowerCase()
+      });
       window.open(app.url, '_blank')
     } else {
-      this.dialog.open(ProjectDetailModalComponent, {
-        data: app,
-        width: '100dvw',
-        maxWidth: '100dvw',
-        height: '100dvh',
-        maxHeight: '100dvh',
-      })
+        gtag('event', 'click', {
+          event_category: 'portfolio_projects',
+          event_label: app.name.toLowerCase()
+        });
+        this.dialog.open(ProjectDetailModalComponent, {
+          data: app,
+          width: '100dvw',
+          maxWidth: '100dvw',
+          height: '100dvh',
+          maxHeight: '100dvh',
+        })
     }
   }
 

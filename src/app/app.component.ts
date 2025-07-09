@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        gtag('config', 'G-FH8LQY4GFP', {
+        gtag('config', 'G-M5DQVNGYHM', {
           page_path: window.location.pathname + window.location.search
         });
 

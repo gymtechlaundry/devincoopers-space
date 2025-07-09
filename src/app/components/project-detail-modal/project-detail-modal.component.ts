@@ -17,7 +17,7 @@ export class ProjectDetailModalComponent {
     public dialogRef: MatDialogRef<ProjectDetailModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-    if (data.website) this.buttonLabel = 'Go to site';
+    if (data.website) this.buttonLabel = 'Go to site'
   }
 
   goToUrl(url:string) {

@@ -66,5 +66,17 @@
     "name": "LinkedIn",
     "icon": "assets/images/icons/linkedin.png",
     "url": "https://www.linkedin.com/in/devinraycooper/"
+  },
+  {
+    "name": "In Progress...",
+    "icon": "assets/images/icons/loading.gif",
+    "description": "This whitelabel mobile app showcases live events, menus, and daily specials across Amelia Island’s top bars, with easy filtering by venue and stage location for a personalized nightlife experience.",
+    "androidLink": "",
+    "iosLink": "",
+    "website": "http://devincoopers.space",
+    "github": "https://github.com/DARC-Software/aihg-frontend",
+    "screenshots": [
+        
+    ]
   }
 ]

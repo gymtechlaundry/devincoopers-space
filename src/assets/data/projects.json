@@ -76,7 +76,8 @@
     "website": "http://devincoopers.space",
     "github": "https://github.com/DARC-Software/aihg-frontend",
     "screenshots": [
-        
+        "AIHG/home-screen.png",
+        "AIHG/locations-screen.png"
     ]
   }
 ]

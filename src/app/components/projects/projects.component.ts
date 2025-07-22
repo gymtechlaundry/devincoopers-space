@@ -58,6 +58,8 @@ export class ProjectsComponent {
       case 'github': window.open('https://github.com/gymtechlaundry', '_blank');
         break;
       case 'linkedin': window.open('https://www.linkedin.com/in/devinraycooper/', '_blank');
+        break;
+      case 'X': window.open('https://x.com/devincooper', '_blank');
     }
   }
 }

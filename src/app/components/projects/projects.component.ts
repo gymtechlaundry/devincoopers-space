@@ -47,16 +47,18 @@ export class ProjectsComponent {
     }
   }
 
-  callMe() {
-    window.open('tel:+19044891072', '_self');
-  }
-
-  emailMe() {
-    window.open('mailto:looking@devincoopers.space', '_self');
-  }
-
-  textMe() {
-    window.open('sms:+19044891072', '_self');
+  openAction(open: string) {
+    switch (open) {
+      case 'phone': window.open('tel:+19044891072', '_self');
+        break;
+      case 'email': window.open('mailto:looking@devincoopers.space', '_self');
+        break;
+      case 'text': window.open('sms:+19044891072', '_self');
+        break;
+      case 'github': window.open('https://github.com/gymtechlaundry', '_blank');
+        break;
+      case 'linkedin': window.open('https://www.linkedin.com/in/devinraycooper/', '_blank');
+    }
   }
 }
 

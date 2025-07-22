@@ -1,19 +1,29 @@
 <div class="projects-container">
     <div class="app-grid">
-        <div class="app-icon" *ngFor="let app of projects" trackClick [disableTracking]="true" (pointerup)="goToProject(app)">
-            <img [src]="app.icon" alt="{{ app.name }}">
-            <span>{{ app.name }}</span>
+            <div class="app-icon" *ngFor="let app of projects" trackClick [disableTracking]="true" (pointerup)="goToProject(app)">
+                <img [src]="app.icon" alt="{{ app.name }}">
+                <span>{{ app.name }}</span>
+            </div>
+            <div class="app-icon">
+                <img src="assets/images/icons/github.png" alt="Github" (pointerup)="openAction('github')">
+                <span>Github</span>
+            </div>
+            <div class="app-icon">
+                <img src="assets/images/icons/linkedin.png" alt="LinkedIn" (pointerup)="openAction('linkedin')">
+                <span>LinkedIn</span>
+            </div>
         </div>
+        <div class="app-icon">
     </div>
 
     <div class="favorites-dock">
-        <button class="dock-icon" trackClick trackLabel="phone" trackCategory="contact_phone" (pointerup)="callMe()">
+        <button class="dock-icon" trackClick trackLabel="phone" trackCategory="contact_phone" (pointerup)="openAction('phone')">
             <img src="assets/images/icons/phone.png" alt="Call">
         </button>
-        <button class="dock-icon" trackClick trackLabel="email" trackCategory="contact_email" (pointerup)="emailMe()">
+        <button class="dock-icon" trackClick trackLabel="email" trackCategory="contact_email" (pointerup)="openAction('email')">
             <img src="assets/images/icons/email.png" alt="Email">
         </button>
-        <button class="dock-icon" trackClick trackLabel="text" trackCategory="contact_text" (pointerup)="textMe()">
+        <button class="dock-icon" trackClick trackLabel="text" trackCategory="contact_text" (pointerup)="openAction('text')">
             <img src="assets/images/icons/imessage.png" alt="Text">
         </button>
     </div>

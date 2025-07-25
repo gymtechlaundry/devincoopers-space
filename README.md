@@ -25,7 +25,7 @@ Welcome to my portfolio site! This Angular application is the central hub for sh
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_GITHUB_USERNAME/devincoopers.space.git
+git clone https://github.com/gymtechlaundry/devincoopers.space.git
 
 # Install dependencies
 npm install
@@ -48,6 +48,6 @@ MIT License
 ## 📬 Contact
 
 **Devin Cooper**\
-Email: [devin@devincoopers.space](mailto\:devin@devincoopers.space)\
+Email: [looking@devincoopers.space](mailto\:devin@devincoopers.space)\
 Website: [devincoopers.space](https://devincoopers.space)
 

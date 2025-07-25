@@ -45,7 +45,7 @@ jobs:
         with:
           repository: darc-software/helm-values
           path: helm-values
-          ssh-key: ${{ secrets.HELM_REPO_DEPLOY_KEY }}
+          token: ${{ secrets.HELM_REPO_DEPLOY_KEY }}
 
       - name: Deploy via Helm over SSH
         uses: appleboy/ssh-action@v1.0.3

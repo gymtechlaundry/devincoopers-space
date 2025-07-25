@@ -44,8 +44,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: darc-software/helm-values
-          path: helm-values
-          ssh-key: ${{ secrets.HELM_REPO_DEPLOY_KEY }}
+          token: ${{ secrets.GHCR_PAT }}
 
       - name: Deploy via Helm over SSH
         uses: appleboy/ssh-action@v1.0.3

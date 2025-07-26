@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectDetailModalComponent } from '../project-detail-modal/project-detail-modal.component';
-import projects from '../../../assets/data/projects.json';
 import { TrackClickDirective } from '../../directive/track-click.directive';
+import { ProjectService } from '../../services/project.service';
+import { Project } from '../../models/project.model';
 
 declare let gtag: Function;
 
@@ -15,14 +16,17 @@ declare let gtag: Function;
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
-  projects: any[] = [];
+export class ProjectsComponent implements OnInit {
+  private projectService = inject(ProjectService);
+  projects: Project[] = [];
 
   constructor(private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
-    this.projects = projects;
+    this.projectService.getProjects().subscribe(data => {
+      this.projects = data;
+    });
   }
 
   goToProject(app: any) {

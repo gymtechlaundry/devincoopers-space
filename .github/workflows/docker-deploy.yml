@@ -34,7 +34,7 @@ jobs:
             ghcr.io/${{ github.repository }}:${{ github.sha }}
           no-cache: true
           build-args: |
-            BUILD-CONFIG=staging
+            BUILD_CONFIG=staging
 
   deploy:
     runs-on: ubuntu-latest

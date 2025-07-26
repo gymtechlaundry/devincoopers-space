@@ -48,6 +48,6 @@ MIT License
 ## 📬 Contact
 
 **Devin Cooper**\
-Email: [looking@devincoopers.space](mailto\:devin@devincoopers.space)\
+Email: [looking@devincoopers.space](mailto\:looking@devincoopers.space)\
 Website: [devincoopers.space](https://devincoopers.space)
 

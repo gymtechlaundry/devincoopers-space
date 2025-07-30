@@ -4,7 +4,6 @@
     width: 100%;
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
-    // background: rgba($color: #000000, $alpha: 0.3);
     background: transparent;
     justify-content: space-between;
 
@@ -14,7 +13,7 @@
     
     .site-title {
         font-family: Cinzel;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         text-shadow: 2px 2px 2px black;
         font-weight: bolder;
         margin: 0;

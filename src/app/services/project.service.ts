@@ -17,8 +17,8 @@ export class ProjectService {
   // Get all projects
   getProjects(): Observable<Project[]> {
     const headers = new HttpHeaders({
-    'x-api-key': environment.apiKey
-  });
+      'x-api-key': environment.apiKey
+    });
     return this.http.get<Project[]>(`${this.baseUrl}/projects`, { headers });
   }
 }

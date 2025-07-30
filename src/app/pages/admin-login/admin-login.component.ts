@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
+import { MatCard, MatCardTitle } from '@angular/material/card';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-admin-login',
@@ -15,10 +16,17 @@ export class AdminLoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private auth: AuthService, private router: Router) {}
   
   login() {
-    throw new Error('Method not implemented.');
+    this.auth.login(this.username, this.password).subscribe({
+      next: () => {
+        console.log("it is hitting next");
+        this.router.navigate(['/admin']);
+      },
+
+      error: () => alert('Login Failed'),
+    })
   }
 
   cancel() {

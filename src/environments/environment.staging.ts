@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
     apiUrl: 'https://api.devincoopers.space/api',
-    apiKey: 'devincoopers-space'
+    apiKey: 'devincoopers-portfolio'
 }

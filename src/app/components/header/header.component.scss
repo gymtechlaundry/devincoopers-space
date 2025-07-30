@@ -1,0 +1,72 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    background: rgba($color: #000000, $alpha: 0.3);
+    justify-content: space-between;
+
+    &.hidden {
+    transform: translateY(-100%);
+  }
+    
+    .site-title {
+        font-family: Cinzel;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 2px black;
+        font-weight: bolder;
+        margin: 0;
+        color: #CFAF67;
+    }
+    
+    .menu-button {
+        background: transparent;
+        border: none;
+        
+        mat-icon {
+            color: #CFAF67;
+        }
+
+        mat-menu {
+            background: white;
+        }
+    }
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    background: rgba(27, 27, 27, 0.85);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+    animation: fadeIn 0.3s ease-in-out;
+
+    .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-family: Cinzel;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #CFAF67;
+      padding: 20px;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        text-shadow: 1px 1px 1px #e6a611;
+      }
+    }
+  }
+}

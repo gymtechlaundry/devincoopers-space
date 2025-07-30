@@ -1,0 +1,90 @@
+:host {
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  background: url('/assets/images/greenbg.png') no-repeat center center / cover;
+  font-family: Cinzel, serif;
+}
+
+.login-card {
+  background: rgba(27, 27, 27, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 400px;
+  color: #CFAF67;
+
+  mat-card-title {
+    font-family: Cinzel;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #CFAF67;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+  font-family: Cinzel;
+
+  ::ng-deep .mat-form-field-label {
+    color: #CFAF67 !important;
+    font-weight: bold;
+  }
+
+  ::ng-deep .mat-input-element {
+    color: #ffffff !important;
+  }
+
+  ::ng-deep .mat-form-field-outline-thick {
+    border-color: #CFAF67 !important;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    border-color: #CFAF67 !important;
+  }
+
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #CFAF67 !important;
+  }
+}
+
+.login-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  button {
+    flex: 1;
+    height: 48px;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+  }
+
+  button[color='accent'] {
+    background-color: #CFAF67;
+    color: #1b1b1b;
+  }
+
+  button[color='primary'] {
+    border: 1px solid #CFAF67;
+    background: transparent;
+    color: #CFAF67;
+  }
+}

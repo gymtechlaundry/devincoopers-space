@@ -10,3 +10,8 @@ bootstrapApplication(AppComponent, {
      provideHttpClient()
   ]
 }).catch((err) => console.error(err));
+
+// src/main.ts
+document.addEventListener('scroll', () => {
+  console.log('[main.ts] Native scroll on <body> detected');
+});

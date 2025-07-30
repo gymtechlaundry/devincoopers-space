@@ -3,6 +3,12 @@
     src: url(assets/fonts/angelina-font/AngelinaPersonalUseOnlyReg-1jzGj.ttf);
 }
 
+@font-face {
+    font-family: Cinzel;
+    src: url(assets/fonts/cinzel/Cinzel-VariableFont_wght.ttf);
+}
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -23,7 +29,7 @@ html, body {
     scroll-snap-align: start;
 }
 
- .page.projects {
+.page.projects {
     position: relative;
     height: 100dvh;
     box-sizing: border-box;
@@ -51,6 +57,7 @@ html, body {
     height: 30px !important;
     display: flex;
     font-size: 2.5rem;
+    color: #CFAF67 ;
 }
 
 @keyframes bounce {

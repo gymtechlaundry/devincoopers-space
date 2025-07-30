@@ -1,0 +1,16 @@
+  <mat-toolbar class="toolbar" [class.hidden]="toolbarHidden">
+    <span class="site-title">DRC</span>
+
+    <span class="spacer"></span>
+
+    <button class="menu-button" mat-icon-button (click)="toggleMenu()">
+        <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" *ngIf="menuOpen" @overlayMenu>
+    <ul class="menu-list">
+      <li (click)="navigate('/admin-login')">Admin Login</li>
+    </ul>
+  </div>

@@ -2,31 +2,18 @@
     background: url("/assets/images/code-bg.jpg");
     background-size: cover;
     display: flex;
-
-    .hero-orbit-container {
-        height: 100dvh;
-        width: 100dvw;
+    height: 100dvh;
+    width: 100dvw;
         
-        .hero-orbit {
+        .hero-image-container {
             height: 100%;
             width: 100%;
             text-align: center;
             align-content: center;
             font-family: Arial, Helvetica, sans-serif;
-            
-            h2 {
-                font-family: Angelina;
-                font-size: 4rem;
-                text-shadow: 2px 2px 2px black;
-                margin: 0;
-                color: rgb(238, 238, 238);
-            }
-            p {
-                font-family: Fahkwang;
-                font-size: 1rem;
-                text-shadow: 2px 2px 2px black;
-                margin: 0;
+
+            img {
+                height: 300px;
             }
         }
-    }
 }

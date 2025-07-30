@@ -8,7 +8,7 @@
   },
   "include": [
     "src/**/*.ts"
-  ],
+, "hello.ts"  ],
   "exclude": [
     "src/**/*.spec.ts"
   ]

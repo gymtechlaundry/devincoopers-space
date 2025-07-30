@@ -1,0 +1,20 @@
+<mat-card class="login-card">
+  <mat-card-title>Admin Login</mat-card-title>
+
+  <form (ngSubmit)="login()">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput [(ngModel)]="username" name="username" type="text" autocomplete="username" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="password" name="password" type="password" autocomplete="current-password" required />
+    </mat-form-field>
+
+    <div class="login-actions">
+      <button mat-stroked-button color="primary" type="button" (click)="cancel()">Cancel</button>
+      <button mat-raised-button color="accent" type="submit">Login</button>
+    </div>
+  </form>
+</mat-card>

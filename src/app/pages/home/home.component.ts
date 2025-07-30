@@ -1,13 +1,14 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { HeroComponent
- } from '../hero/hero.component';
-import { ProjectsComponent } from "../projects/projects.component";
+ } from '../../components/hero/hero.component';
+import { ProjectsComponent } from "../../components/projects/projects.component";
 import { TrackClickDirective } from '../../directive/track-click.directive';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-home',
-  imports: [MatIcon, HeroComponent, ProjectsComponent, TrackClickDirective],
+  imports: [MatIcon, HeaderComponent, HeroComponent, ProjectsComponent, TrackClickDirective],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

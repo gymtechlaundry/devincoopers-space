@@ -9,15 +9,4 @@ import { MatGridListModule } from '@angular/material/grid-list';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
-  @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>
-
-  ngAfterViewInit() {
-    const vid = this.heroVideo?.nativeElement;
-    if (vid) {
-      vid.muted = true;
-      vid.play().catch(error => {
-        console.warn('Autoplay blocked:', error);
-      });
-    }
-  }
 }

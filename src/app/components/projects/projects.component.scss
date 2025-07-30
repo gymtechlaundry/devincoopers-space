@@ -3,7 +3,7 @@
     position: relative;
     height: 100dvh;
     width: 100dvw;
-    background: url("/assets/images/greenbg.png") no-repeat;
+    background: url("/assets/images/greenbg-vh.png") no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -84,7 +84,7 @@
 
 @media (min-width: 768px) {
     .projects-container {
-        background: url("/assets/images/greenbg.png") no-repeat;
+        background: url("/assets/images/greenbg-vh.png") no-repeat;
         background-position: center;
         background-size: cover;
     }

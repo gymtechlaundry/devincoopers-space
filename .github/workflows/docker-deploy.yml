@@ -19,7 +19,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHCR_PAT }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -46,7 +46,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: darc-software/helm-values
-          token: ${{ secrets.GHCR_PAT }}
+          path: helm-values
+          ssh-key: ${{ secrets.HELM_REPO_DEPLOY_KEY }}
 
       - name: Deploy via Helm over SSH
         uses: appleboy/ssh-action@v1.0.3

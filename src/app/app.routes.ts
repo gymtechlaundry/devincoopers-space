@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { adminGuard } from './services/admin.guard';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 export const routes: Routes = [ 
     {
@@ -13,6 +14,13 @@ export const routes: Routes = [
         path: 'admin',
         loadComponent: () => import('./pages/admin.dashboard/admin.dashboard.component').then(m => m.AdminDashboardComponent),
         canActivate: [adminGuard],
+        children: [
+            {
+                path: 'portfolio',
+                component: PortfolioComponent,
+                outlet: 'sidenav'
+            },
+        ]
     },
     {
         path: 'admin-login',

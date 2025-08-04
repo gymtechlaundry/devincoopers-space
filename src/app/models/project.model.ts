@@ -3,9 +3,9 @@ export interface Project {
     name: string;
     icon: string;
     description: string;
-    androidLink: string;
-    iosLink: string;
-    website: string;
     github: string;
-    screenshots: string[];
+    androidLink?: string;
+    iosLink?: string;
+    website?: string;
+    screenshots?: string[];
 }

@@ -7,6 +7,7 @@ import { ProjectDetailModalComponent } from '../project-detail-modal/project-det
 import { TrackClickDirective } from '../../directive/track-click.directive';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project.model';
+import { CalculatorComponent } from '../calculator/calculator.component';
 
 declare let gtag: Function;
 
@@ -50,6 +51,20 @@ export class ProjectsComponent implements OnInit {
         })
     }
   }
+
+  goToCalculator() {
+    gtag('event', 'click', {
+      event_category: 'portfolio_projects',
+      event_label: 'calculator'
+    });
+    this.dialog.open(CalculatorComponent, {
+      width: '100dvw',
+      maxWidth: '100dvw',
+      height: '100dvh',
+      maxHeight: '100dvh',
+    })
+  }
+  
 
   openAction(open: string) {
     switch (open) {

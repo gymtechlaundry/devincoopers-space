@@ -23,7 +23,7 @@ export class CustomSidenavComponent {
     {
       icon: 'person',
       label: 'Portfolio',
-      route: 'portfolio'
+      route: 'portfolio-admin'
     },
     {
       icon: 'local_bar',

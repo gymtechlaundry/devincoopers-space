@@ -1,0 +1,14 @@
+<div class="admin-container">
+    <mat-toolbar>
+        <h2>Portfolio Projects</h2>
+        <span class="spacer"></span>
+        <button (click)="openCreate()">+ New Project</button>
+    </mat-toolbar>
+</div>
+<mat-list>
+    @for (project of projects; track $index) {
+        <mat-list-item>
+            <img src="assets/images/icons/loading.gif" alt="" style="height: 40px;">{{ project.name }}
+        </mat-list-item>
+    }
+</mat-list>

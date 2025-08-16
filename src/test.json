@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Not Todo",
+        "description": "Not To-Do helps you break bad habits by tracking what not to do. Set reminders, log failed habits, and stay focused with daily nudges to improve your discipline.",
+        "androidLink": "https://play.google.com/store/apps/details?id=com.darcsoftware.nottodo",
+        "iosLink": "",
+        "website": "",
+        "github": "https://github.com/darc-software/test"
+    },
+    {
+        "name": "My Portfolio",
+        "description": "A full-stack portfolio built with Angular, Spring Boot, and Kubernetes featuring JWT-secured admin tools, image uploads, CI/CD with GitHub Actions, and a custom CDN server via Cloudflare.",
+        "androidLink": "",
+        "iosLink": "",
+        "website": "",
+        "github": "https://github.com/gymtechlaundry/devincoopers-space"
+    }
+]

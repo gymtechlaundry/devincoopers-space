@@ -13,9 +13,9 @@ export class CalculatorComponent {
   firstValue: number | null = null;
   action: string | null = null;
   
-  enterNumber(num: number) {
+  enterNumber(num: string) {
     if (this.display === '0') {
-      this.display = num.toString();
+      this.display = num;
     } else {
       this.display = `${this.display}${num}`;
     }

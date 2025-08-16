@@ -1,10 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-calculator',
-  imports: [MatGridList, MatGridTile],
+  imports: [MatGridList, MatGridTile, MatIcon],
   templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.scss'
 })
@@ -14,6 +15,8 @@ export class CalculatorComponent {
   firstValue: number | null = null;
   secondValue: string = '';
   action: string | null = null;
+
+  constructor(public dialogRef: MatDialogRef<CalculatorComponent>) {}
   
   enterNumber(num: string) {
     if (this.display === '0') {
@@ -61,6 +64,10 @@ export class CalculatorComponent {
       this.firstValue = result;
       this.display = result !== null ? result.toString() : 'Error';
     }
+  }
+
+  close(): void {
+    this.dialogRef.close();
   }
 
 }

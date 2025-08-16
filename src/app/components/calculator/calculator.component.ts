@@ -9,6 +9,46 @@ import { MatGridList, MatGridTile } from '@angular/material/grid-list';
   styleUrl: './calculator.component.scss'
 })
 export class CalculatorComponent {
-  display: string = '0';
+  display = '0';
+  firstValue: number | null = null;
+  action: string | null = null;
+  
+  enterNumber(num: number) {
+    if (this.display === '0') {
+      this.display = num.toString();
+    } else {
+      this.display = `${this.display}${num}`;
+    }
+  }
+  
+  clear() {
+    this.display = '0';
+  }
+  
+  operand(action: string) {
+    this.firstValue = parseFloat(this.display);
+    this.action = action;
+    this.display = ' ';
+  }
+
+  calculate() {
+    const a = this.firstValue;
+    const b = parseFloat(this.display);
+    
+    if (a !== null) {
+      let result: number | null = null;
+      if (this.action === 'm') {
+        result = a * b;
+      } else if (this.action === 'd') {
+        result = a / b;
+      } else if (this.action === 'a') {
+        result = a + b;
+      } else if (this.action === 's') {
+        result = a - b;
+      }
+      this.firstValue = result;
+      this.display = result !== null ? result.toString() : 'Error';
+    }
+  }
 
 }

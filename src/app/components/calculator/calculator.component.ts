@@ -10,7 +10,9 @@ import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 })
 export class CalculatorComponent {
   display = '0';
+  previousDisplay = '';
   firstValue: number | null = null;
+  secondValue: string = '';
   action: string | null = null;
   
   enterNumber(num: string) {
@@ -18,32 +20,42 @@ export class CalculatorComponent {
       this.display = num;
     } else {
       this.display = `${this.display}${num}`;
+      this.secondValue = `${this.secondValue}${num}`;
     }
+    console.log(this.display);
+    console.log('first value' + this.firstValue);
+    console.log('second value' + this.secondValue);
+    console.log('action ' + this.action);
   }
   
   clear() {
     this.display = '0';
+    this.firstValue = null;
+    this.secondValue = '';
+    this.previousDisplay = '';
   }
   
   operand(action: string) {
+    this.secondValue = '';
     this.firstValue = parseFloat(this.display);
     this.action = action;
-    this.display = ' ';
+    this.display = `${this.display}${action}`;
   }
 
   calculate() {
+    this.previousDisplay = this.display;
     const a = this.firstValue;
-    const b = parseFloat(this.display);
+    const b = parseFloat(this.secondValue);
     
     if (a !== null) {
       let result: number | null = null;
-      if (this.action === 'm') {
+      if (this.action === 'x') {
         result = a * b;
-      } else if (this.action === 'd') {
+      } else if (this.action === '÷') {
         result = a / b;
-      } else if (this.action === 'a') {
+      } else if (this.action === '+') {
         result = a + b;
-      } else if (this.action === 's') {
+      } else if (this.action === '-') {
         result = a - b;
       }
       this.firstValue = result;

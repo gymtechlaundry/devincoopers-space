@@ -13,7 +13,7 @@
     position: relative;
     height: 100dvh;
     width: 100dvw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: SF Pro;
     border-radius: 20px;
     
     @media (min-width: 768px) {
@@ -22,9 +22,19 @@
     }
 }
 
+.previous-display {
+    color: gray;
+    font-size: 24px;
+    letter-spacing: 5px;
+    padding: 0 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .display {
     color: white;
-    font-size: 64px;
+    font-size: 80px;
+    letter-spacing: 5px;
     padding: 0 1.2rem;
     display: flex;
     justify-content: flex-end;

@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { adminGuard } from './services/admin.guard';
 import { PortfolioAdminComponent } from './pages/portfolio-admin/portfolio-admin.component';
+import { BingoAdminComponent } from './pages/bingo-admin/bingo-admin.component';
 
 export const routes: Routes = [ 
     {
@@ -18,6 +19,11 @@ export const routes: Routes = [
             {
                 path: 'portfolio-admin',
                 component: PortfolioAdminComponent,
+                outlet: 'sidenav'
+            },
+            {
+                path: 'bingo-admin',
+                component: BingoAdminComponent,
                 outlet: 'sidenav'
             },
         ]

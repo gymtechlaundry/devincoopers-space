@@ -27,8 +27,8 @@ export class CustomSidenavComponent {
     },
     {
       icon: 'local_bar',
-      label: 'BarSync',
-      route: 'barsync'
+      label: 'Boozy Bingo',
+      route: 'bingo-admin'
     }
   ])
 

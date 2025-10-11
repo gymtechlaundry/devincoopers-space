@@ -68,13 +68,13 @@ export class ProjectsComponent implements OnInit {
 
   openAction(open: string) {
     switch (open) {
-      case 'phone': window.open('tel:+19045561823', '_self');
+      case 'phone': window.open('tel:+19044891072', '_self');
         break;
       case 'email': window.open('mailto:looking@devincoopers.space', '_self');
         break;
-      case 'text': window.open('sms:+19045561823', '_self');
+      case 'text': window.open('sms:+19044891072', '_self');
         break;
-      case 'github': window.open('https://github.com/gymtechlaundry', '_blank');
+      case 'github': window.open('https://github.com/DARC-Software', '_blank');
         break;
       case 'linkedin': window.open('https://www.linkedin.com/in/devinraycooper/', '_blank');
         break;
